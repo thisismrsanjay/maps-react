@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 app.use(cors());
 
-mongoose.connect('mongodb://sanjay:sanjay123@ds111922.mlab.com:11922/maps',{ useNewUrlParser: true });
+mongoose.connect('mongodb+srv://sanjay:test@cluster0.eojavml.mongodb.net/?retryWrites=true&w=majority');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
